@@ -1,7 +1,8 @@
 <%= form_with(model: bug) do |form| %>
   <% if bug.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(bug.errors.count, "error") %> prohibited this bug from being saved:</h2>
+    <div id="error_explanation" class="notification">
+      <span><button class="delete"></button></span>
+      <h2><strong><%= pluralize(bug.errors.count, "error") %> prohibited this bug from being saved:</strong></h2>
 
       <ul>
         <% bug.errors.each do |error| %>
