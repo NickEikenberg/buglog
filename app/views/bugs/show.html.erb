@@ -2,8 +2,6 @@
   <strong><%= @bug.title %></strong>
 </p>
 
-<%= @bug.inspect %>
-
 <div>
   <h3><strong>Description:</strong></h3>
   <p><%= @bug.description %></p>
@@ -48,8 +46,8 @@
 </p>
 
 <div>
-  <p><em>Created <%= @bug.created_at %></em></p>
-  <p><em>Last updated <%= @bug.updated_at %></em></p>
+  <p><em>Created on <%= @bug.created_at.to_formatted_s(:long_ordinal) %></em></p>
+  <p><em>Last updated <%= @bug.updated_at.to_formatted_s(:long_ordinal) %></em></p>
 </div>
 
 <%= link_to 'Edit', edit_bug_path(@bug) %> |
