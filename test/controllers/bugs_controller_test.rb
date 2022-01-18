@@ -2,7 +2,7 @@ require "test_helper"
 
 class BugsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @bug = bugs(:one)
+    @bug = bugs(:testbug)
   end
 
   test "should get index" do

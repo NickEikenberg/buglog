@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyText
-  description: MyText
-  branch: MyText
-  severity: MyText
-  priority: MyText
-  reported_by: 1
-  assigned_to: 1
-  status: MyText
-  repro_steps: MyText
+testbug:
+  title: test bug
+  description: description for test bug
+  branch: dev
+  severity: A
+  priority: High
+  reported_by: 3
+  assigned_to: 4
+  status: Open
+  repro_steps: Do thing and do another thing
 
 two:
   title: MyText
