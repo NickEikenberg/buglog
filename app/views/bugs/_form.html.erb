@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :severity %>
-    <%= form.text_area :severity %>
+    <%= form.select :severity, ['A', 'B', 'C', 'Task'] %>
   </div>
 
   <div class="field">
     <%= form.label :priority %>
-    <%= form.text_area :priority %>
+    <%= form.select :priority, ['Low', 'Medium', 'High'] %>
   </div>
 
   <div class="field">

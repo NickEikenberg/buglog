@@ -13,7 +13,8 @@
 
   <body>
 
-   <%= render "shared/header" %>
+    <%= render "shared/header" %>
+    
     <% if notice.present? %>
       <p class="notification is-link is-light"><%= notice %>
         <span><button class="delete"></button></span>
@@ -23,5 +24,6 @@
     <div class="container"> 
       <%= yield %>
     </div>
+
   </body>
 </html>
