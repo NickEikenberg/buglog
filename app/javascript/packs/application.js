@@ -8,8 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import navbar from 'bulma-navbar'
+import notification from 'bulma-notification'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 navbar()
+notification()

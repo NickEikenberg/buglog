@@ -15,11 +15,9 @@
 
    <%= render "shared/header" %>
     <% if notice.present? %>
-      <p class="notification is-link is-light"><%= notice %></p>
-    <% end %>
-
-    <% if notice.present? %>
-      <p class="notification is-danger is-light"><%= alert %></p>
+      <p class="notification is-link is-light"><%= notice %>
+        <span><button class="delete"></button></span>
+      </p>
     <% end %>
 
     <div class="container"> 
