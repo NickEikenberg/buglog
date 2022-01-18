@@ -1,11 +1,18 @@
 <p>
-  <strong>Title:</strong>
-  <%= @bug.title %>
+  <strong><%= @bug.title %></strong>
 </p>
 
+<%= @bug.inspect %>
+
+<div>
+  <h3><strong>Description:</strong></h3>
+  <p><%= @bug.description %></p>
+</div>
+<br/>
+
 <p>
-  <strong>Description:</strong>
-  <%= @bug.description %>
+  <strong>Reported by:</strong>
+  <%= @bug.reported_by %>
 </p>
 
 <p>
@@ -23,10 +30,7 @@
   <%= @bug.priority %>
 </p>
 
-<p>
-  <strong>Reported by:</strong>
-  <%= @bug.reported_by %>
-</p>
+
 
 <p>
   <strong>Assigned to:</strong>
@@ -42,6 +46,11 @@
   <strong>Repro steps:</strong>
   <%= @bug.repro_steps %>
 </p>
+
+<div>
+  <p><em>Created <%= @bug.created_at %></em></p>
+  <p><em>Last updated <%= @bug.updated_at %></em></p>
+</div>
 
 <%= link_to 'Edit', edit_bug_path(@bug) %> |
 <%= link_to 'Back', bugs_path %>
