@@ -1,0 +1,62 @@
+<%= form_with(model: bug) do |form| %>
+  <% if bug.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bug.errors.count, "error") %> prohibited this bug from being saved:</h2>
+
+      <ul>
+        <% bug.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_area :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch %>
+    <%= form.text_area :branch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :severity %>
+    <%= form.text_area :severity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.text_area :priority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reported_by %>
+    <%= form.number_field :reported_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assigned_to %>
+    <%= form.number_field :assigned_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_area :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repro_steps %>
+    <%= form.text_area :repro_steps %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

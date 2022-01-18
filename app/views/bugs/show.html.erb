@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bug.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bug.description %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @bug.branch %>
+</p>
+
+<p>
+  <strong>Severity:</strong>
+  <%= @bug.severity %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @bug.priority %>
+</p>
+
+<p>
+  <strong>Reported by:</strong>
+  <%= @bug.reported_by %>
+</p>
+
+<p>
+  <strong>Assigned to:</strong>
+  <%= @bug.assigned_to %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bug.status %>
+</p>
+
+<p>
+  <strong>Repro steps:</strong>
+  <%= @bug.repro_steps %>
+</p>
+
+<%= link_to 'Edit', edit_bug_path(@bug) %> |
+<%= link_to 'Back', bugs_path %>
