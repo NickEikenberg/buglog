@@ -7,7 +7,9 @@
         <li class="title is-4"><%= @bug.title %></li>
         <li class="subtitle is-6">Reported by <%= @bug.reported_by %></li>
 
-        <li><strong>Project: <%= @project.name %> </strong></li>
+        <% if @project %>
+          <li><strong>Project: <%= @project.name %> </strong></li>
+        <% end %>
 
 
         <li>
