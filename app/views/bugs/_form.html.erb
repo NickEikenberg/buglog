@@ -13,6 +13,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :project, class: "label" %>
+    <%= form.select :project_id, Project.all.collect {|p| [p.name, p.id]}, {}, class: "select" %>
+  </div>
+
+  <div class="field">
     <%= form.label :title, class: "label" %>
     <%= form.text_field :title, class: "input" %>
   </div>

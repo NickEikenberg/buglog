@@ -1,54 +1,78 @@
-<p>
-  <strong><%= @bug.title %></strong>
-</p>
+<div class="card">
+  
+  <div class="card-content">
+    <div class="media">
+      
+      <ul class="media-content">
+        <li class="title is-4"><%= @bug.title %></li>
+        <li class="subtitle is-6">Reported by <%= @bug.reported_by %></li>
 
-<div>
-  <h3><strong>Description:</strong></h3>
-  <p><%= @bug.description %></p>
+        <li><strong>Project: <%= @project.name %> </strong></li>
+
+
+        <li>
+          <strong>Branch:</strong>
+          <%= @bug.branch %>
+        </li>
+
+        <li>
+          <strong>Severity:</strong>
+          <%= @bug.severity %>
+        </li>
+
+        <li>
+          <strong>Priority:</strong>
+          <%= @bug.priority %>
+        </li>
+
+        <li>
+          <strong>Assigned to:</strong>
+          <%= @bug.assigned_to %>
+        </li>
+
+        <li>
+          <strong>Status:</strong>
+          <%= @bug.status %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <p>
+        <%= @bug.description %>
+      </p>
+
+      <p>
+        <strong>Repro steps:</strong>
+        <%= @bug.repro_steps %>
+      </p>
+
+      
+
+      <div>
+        <p><em>Created on <%= @bug.created_at.to_formatted_s(:long_ordinal) %></em></p>
+        <p><em>Last updated <%= @bug.updated_at.to_formatted_s(:long_ordinal) %></em></p>
+      </div>
+
+      <%= link_to 'Edit', edit_bug_path(@bug) %> |
+      <%= link_to 'Back', bugs_path %>
+    </div>
+  </div>
 </div>
-<br/>
 
 <p>
-  <strong>Reported by:</strong>
-  <%= @bug.reported_by %>
-</p>
-
-<p>
-  <strong>Branch:</strong>
-  <%= @bug.branch %>
-</p>
-
-<p>
-  <strong>Severity:</strong>
-  <%= @bug.severity %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @bug.priority %>
+  <strong></strong>
 </p>
 
 
 
-<p>
-  <strong>Assigned to:</strong>
-  <%= @bug.assigned_to %>
-</p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @bug.status %>
-</p>
 
-<p>
-  <strong>Repro steps:</strong>
-  <%= @bug.repro_steps %>
-</p>
 
-<div>
-  <p><em>Created on <%= @bug.created_at.to_formatted_s(:long_ordinal) %></em></p>
-  <p><em>Last updated <%= @bug.updated_at.to_formatted_s(:long_ordinal) %></em></p>
-</div>
 
-<%= link_to 'Edit', edit_bug_path(@bug) %> |
-<%= link_to 'Back', bugs_path %>
+
+
+
+
+
+

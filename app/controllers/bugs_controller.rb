@@ -8,6 +8,7 @@ class BugsController < ApplicationController
 
   # GET /bugs/1 or /bugs/1.json
   def show
+    @project = Project.find_by(id: @bug.project_id)
   end
 
   # GET /bugs/new
@@ -65,6 +66,6 @@ class BugsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bug_params
-      params.require(:bug).permit(:title, :description, :branch, :severity, :priority, :reported_by, :assigned_to, :status, :repro_steps)
+      params.require(:bug).permit(:title, :description, :branch, :severity, :priority, :reported_by, :assigned_to, :status, :repro_steps, :project_id)
     end
 end
