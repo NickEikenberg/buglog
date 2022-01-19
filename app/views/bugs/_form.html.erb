@@ -13,18 +13,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_area :title %>
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description, class: "label" %>
+    <%= form.text_area :description, class: "control textarea"  %>
   </div>
 
   <div class="field">
     <%= form.label :branch %>
-    <%= form.text_area :branch %>
+    <%= form.text_field :branch %>
   </div>
 
   <div class="field">
@@ -49,15 +49,15 @@
 
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_area :status %>
+    <%= form.select :status, ["Open", "Closed", "Fixed", "Re-Opened", "Fix Verified"] %>
   </div>
 
   <div class="field">
-    <%= form.label :repro_steps %>
-    <%= form.text_area :repro_steps %>
+    <%= form.label :repro_steps, class: "label" %>
+    <%= form.text_area :repro_steps, class: "control textarea" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div>
+    <%= form.submit class: "button is-link" %>
   </div>
 <% end %>
