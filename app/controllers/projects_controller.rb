@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1 or /projects/1.json
   def show
     @bugs = Bug.where(project_id: @project.id)
+    @owner = User.find_by_id(@project.user_id)
   end
 
   # GET /projects/new

@@ -2,6 +2,10 @@
   <strong>Name:</strong>
   <%= @project.name %>
 </p>
+<p>
+  <strong>Project Owner:</strong>
+  <%= @owner.username %>
+</p>
 
 <%= link_to "Report new issue", new_bug_path(@project.id)%>
 
