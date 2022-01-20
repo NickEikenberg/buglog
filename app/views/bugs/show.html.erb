@@ -2,11 +2,10 @@
   
   <div class="card-content">
     <div class="media">
-      
       <ul class="media-content">
         <li class="title is-4"><%= @bug.title %></li>
         <li class="subtitle is-6">Reported by <%= @bug.reported_by %></li>
-
+        
         <% if @project %>
           <li><strong>Project: <%= @project.name %> </strong></li>
         <% end %>

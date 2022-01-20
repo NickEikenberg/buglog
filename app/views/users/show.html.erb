@@ -1,5 +1,24 @@
 <% if user_signed_in? %>
  <h1><%= @user.username %>'s profile page</h1> 
+
+ <div class="container">
+    <h1><%= @user.username %>'s projects</h1>
+    <ul>
+      <% @projects.each do |project| %>
+        <li><%= link_to project.name, project_path(project.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h1><%= @user.username %>'s bugs</h1>
+    <ul>
+      <% @bugs.each do |bug| %>
+        <li><%= link_to bug.title, bug_path(bug.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+
 <% else %>
   <h2>User logged out</h2>
 <% end %>
