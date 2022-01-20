@@ -14,7 +14,7 @@ class BugsController < ApplicationController
   # GET /bugs/new
   def new
     @bug = Bug.new
-    @project = User.find_by_id(params[:id])
+    @project = Project.find_by_id(params[:id])
   end
 
   # GET /bugs/1/edit
