@@ -12,6 +12,8 @@
     </div>
   <% end %>
 
+  <%= params %>
+
   <div class="field">
     <%= form.label :project, class: "label" %>
     <%= form.select :project_id, Project.all.collect {|p| [p.name, p.id]}, {}, class: "select" %>

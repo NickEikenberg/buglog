@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index, :show]
   resources :projects
-  resources :bugs
+  resources :bugs, path: 'bugs/new/:id'
+
 end

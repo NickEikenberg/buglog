@@ -3,6 +3,7 @@
   <%= @project.name %>
 </p>
 
+<%= link_to "Report new issue", new_bug_path(@project.id)%>
 
 <table class="table">
   <thead>
