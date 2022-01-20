@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
-  <h1>Welcome <%= @user.email %>!</h1>
-  <%= @user.inspect %>
+  <h1>Welcome <%= @user.username %>!</h1>
+
 <% else %>
   <p>Please <%= link_to 'sign in', new_user_session_path %> to create/join a project, or <%= link_to 'sign up', new_user_registration_path %> if you don't have an account</p>
 <% end %>
