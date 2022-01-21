@@ -3,11 +3,15 @@
     <div class="media">
       <ul class="media-content">
         <li class="title is-4"><%= @bug.title %></li>
-        <li class="subtitle is-6">Reported by <%= @creator.username %></li>
+        <li class="subtitle is-8">
+          <strong>Reported by: <%= @creator.username %></strong>
+          <br/>
+          <strong>Project: <%= @project.name %> </strong>
+        </li>
         
-        <% if @project %>
-          <li><strong>Project: <%= @project.name %> </strong></li>
-        <% end %>
+
+
+
 
         <li>
           <strong>Branch:</strong>
@@ -38,6 +42,7 @@
 
     <div class="content">
       <p>
+        <strong>Description:</strong>
         <%= @bug.description %>
       </p>
 
