@@ -1,5 +1,4 @@
 <div class="card">
-  
   <div class="card-content">
     <div class="media">
       <ul class="media-content">
@@ -27,7 +26,7 @@
 
         <li>
           <strong>Assigned to:</strong>
-          <%= @bug.assigned_to %>
+          <%= User.find_by_id(@bug.assigned_to).username %>
         </li>
 
         <li>
@@ -46,8 +45,6 @@
         <strong>Repro steps:</strong>
         <%= @bug.repro_steps %>
       </p>
-
-      
 
       <div>
         <p><em>Created on <%= @bug.created_at.to_formatted_s(:long_ordinal) %></em></p>

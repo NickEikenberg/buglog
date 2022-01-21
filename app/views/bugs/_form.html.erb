@@ -46,13 +46,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :reported_by %>
-    <%= form.number_field :reported_by %>
-  </div>
-
-  <div class="field">
     <%= form.label :assigned_to %>
-    <%= form.number_field :assigned_to %>
+    <%= form.select :assigned_to, User.all.collect {|user| [user.username, user.id]}, {} %>
   </div>
 
   <div class="field">
