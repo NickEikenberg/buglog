@@ -9,6 +9,7 @@ class BugsController < ApplicationController
   # GET /bugs/1 or /bugs/1.json
   def show
     @project = Project.find_by(id: @bug.project_id)
+    @creator = User.find_by_id(@bug.user_id)
   end
 
   # GET /bugs/new
