@@ -32,8 +32,8 @@
         <td><%= bug.branch %></td>
         <td><%= bug.severity %></td>
         <td><%= bug.priority %></td>
-        <td><%= bug.reported_by %></td>
-        <td><%= bug.assigned_to %></td>
+        <td><%= User.find_by_id(bug.reported_by).username %></td>
+        <td><%= User.find_by_id(bug.assigned_to).username %></td>
         <td><%= bug.status %></td>
         <td><%= bug.created_at %></td>
        

@@ -21,6 +21,10 @@
   </div>
 
   <div class="field">
+    <%= form.hidden_field :reported_by, value: current_user.id  %>
+  </div>
+
+  <div class="field">
     <%= form.label :title, class: "label" %>
     <%= form.text_field :title, class: "input" %>
   </div>
