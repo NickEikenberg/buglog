@@ -19,6 +19,7 @@ class BugsController < ApplicationController
 
   # GET /bugs/1/edit
   def edit
+    @project = Project.find_by(id: @bug.project_id)
   end
 
   # POST /bugs or /bugs.json
