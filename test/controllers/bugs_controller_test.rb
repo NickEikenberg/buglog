@@ -4,6 +4,7 @@ class BugsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @bug = bugs(:testbug)
     @project = projects(:projectone)
+    @user = users(:testuser)
   end
 
   # test "should get index" do
@@ -18,7 +19,7 @@ class BugsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bug" do
     assert_difference('Bug.count') do
-      post bugs_url, params: { bug: { assigned_to: @bug.assigned_to, branch: @bug.branch, description: @bug.description, priority: @bug.priority, reported_by: @bug.reported_by, repro_steps: @bug.repro_steps, severity: @bug.severity, status: @bug.status, title: @bug.title, project_id: @project.id } }
+      post bugs_url(@bug.id), params: { bug: { assigned_to: @bug.assigned_to, branch: @bug.branch, description: @bug.description, priority: @bug.priority, reported_by: @bug.reported_by, repro_steps: @bug.repro_steps, severity: @bug.severity, status: @bug.status, title: @bug.title, project_id: @project.id } }
     end
 
     assert_redirected_to bug_url(Bug.last)
