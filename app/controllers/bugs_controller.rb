@@ -2,9 +2,9 @@ class BugsController < ApplicationController
   before_action :set_bug, only: %i[ show edit update destroy ]
 
   # GET /bugs or /bugs.json
-  def index
-    @bugs = Bug.all
-  end
+  # def index
+  #   @bugs = Bug.all
+  # end
 
   # GET /bugs/1 or /bugs/1.json
   def show
