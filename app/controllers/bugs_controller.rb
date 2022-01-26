@@ -53,10 +53,11 @@ class BugsController < ApplicationController
 
   # DELETE /bugs/1 or /bugs/1.json
   def destroy
+    @project = Project.find_by(id: @bug.project_id)
     @bug.destroy
 
     respond_to do |format|
-      format.html { redirect_to bugs_url, notice: "Bug was successfully deleted." }
+      format.html { redirect_to project_path(@project.id), notice: "Bug was successfully deleted." }
       format.json { head :no_content }
     end
   end

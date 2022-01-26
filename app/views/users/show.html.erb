@@ -20,6 +20,15 @@
     </ul>
   </div>
 
+  <div class="container">
+    <h1>Bugs assigned to <%= @user.username %></h1>
+    <ul>
+      <% @assigned.each do |bug| %>
+        <li><%= link_to bug.title, bug_path(bug.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+
 <% else %>
   <h2>User logged out</h2>
 <% end %>
