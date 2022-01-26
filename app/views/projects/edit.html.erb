@@ -2,5 +2,16 @@
 
 <%= render 'form', project: @project %>
 
+<%= form_with(model: @project, method: :put) do |form| %>
+ <div class="field">
+    <%= form.label :add_member %>
+    <%= form.select :members, User.all.collect {|user| [user.username, user.id]}, {} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
 <%= link_to 'Show', @project %> |
 <%= link_to 'Back', root_path %>
